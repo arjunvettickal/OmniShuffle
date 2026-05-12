@@ -1,12 +1,12 @@
-# RoboForge
+# OmniShuffle
 *A customizable Synthetic Data Generation pipeline for perception AI.*
 
-![RoboForge Data Factory Demo](demo.gif.gif)
+![OmniShuffle Data Factory Demo](demo.gif.gif)
 <p align="center">
-  <img src="assets/demo.gif" alt="RoboForge Data Factory Demo" width="400"/>
+  <img src="assets/demo.gif" alt="OmniShuffle Data Factory Demo" width="400"/>
 </p>
 
-RoboForge Data Factory is a synthetic data generation (SDG) pipeline built on **NVIDIA Isaac Sim** and **Omniverse Replicator** to generate photorealistic images and annotations for **object detection** (and optionally pose-centric workflows) in robotics / industrial scenes.
+OmniShuffle is a synthetic data generation (SDG) pipeline built on **NVIDIA Isaac Sim** and **Omniverse Replicator** to generate photorealistic images and annotations for **object detection** (and optionally pose-centric workflows) in robotics / industrial scenes.
 
 It supports:
 - **Static pose randomization** (fast, non-physics)
@@ -69,8 +69,8 @@ Install **Miniconda** or **Anaconda** for environment management:[Miniconda](htt
   
 ```bash
 # Isaac Sim 5.x example (Python 3.11)
-conda create -n roboforge-sdg python=3.11 -y
-conda activate roboforge-sdg
+conda create -n OmniShuffle-sdg python=3.11 -y
+conda activate OmniShuffle-sdg
 ```
 
 If you’re on Isaac Sim 4.x, use `python=3.10.`
@@ -95,7 +95,7 @@ Preferred
 ```bash
 # Example: go to your Isaac Sim install root
 cd <PATH_TO_ISAAC_SIM_INSTALL>
-git clone <YOUR_REPO_URL> roboforge-data-factory
+git clone <YOUR_REPO_URL> OmniShuffle-data-factory
 ```
 Alternative (any location)
 ```bash
@@ -105,7 +105,7 @@ cd <REPO_FOLDER>
 ### 2) Installing deps for conda env from "requirements.txt"
 ```bash
 cd <REPO_FOLDER>
-conda activate roboforge-sdg
+conda activate OmniShuffle-sdg
 pip install -r requirements.txt
 ```
 
@@ -133,10 +133,10 @@ By default coco output is saved within the isaac sim installation folder
 
 ```bash
 # Pose-based Synthetic Data Generation
-./python.bat roboforge-data-factory/object_based_sdg.py --config roboforge-data-factory/config/object_based_sdg_config.yaml
+./python.bat OmniShuffle-data-factory/object_based_sdg.py --config OmniShuffle-data-factory/config/object_based_sdg_config.yaml
 
 # Physics-based Synthetic Data Generation
-./python.bat roboforge-data-factory/object_based_sdg_physX.py --config roboforge-data-factory/config/object_based_sdg_physX_config.yaml
+./python.bat OmniShuffle-data-factory/object_based_sdg_physX.py --config OmniShuffle-data-factory/config/object_based_sdg_physX_config.yaml
 ```
 ### 4) Verify outputs
 
